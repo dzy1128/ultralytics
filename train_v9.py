@@ -16,7 +16,7 @@ if __name__ == '__main__':
     model.train(data='/data/app/ultralytics/dataset/data.yaml',
                 cache=False,
                 imgsz=640,
-                epochs=300,
+                epochs=500,
                 batch=32,
                 close_mosaic=0, # 最后多少个epoch关闭mosaic数据增强，设置0代表全程开启mosaic训练
                 workers=4, # Windows下出现莫名其妙卡主的情况可以尝试把workers设置为0
@@ -27,5 +27,5 @@ if __name__ == '__main__':
                 # amp=False, # close amp | loss出现nan可以关闭amp
                 # fraction=0.2,
                 project='runs/train',
-                name='expV9',
+                name='expV9_',
                 )
